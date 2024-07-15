@@ -59,7 +59,13 @@ const record = [
   { year: "1961", result: "N/A"},
   { year: "1960", result: "N/A"}
 ]
+// Adds a function to find the year a team won the Super Bowl
 function superbowlWin(record) {
-  const winRecord = record.find(game => game.result === "W")
+  // Uses .find to search for the first game with a result of "W"
+  const winRecord = record.find(game => 
+    // Checks if game result is "W"
+    game.result === "W"
+  )
+  // Returns year of game if "W" is found else returns undefined
   return winRecord ? winRecord.year : undefined
 }
